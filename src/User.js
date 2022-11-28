@@ -93,7 +93,7 @@ class User {
              * The flags for this user
              * @type {?UserFlagsBitField}
              */
-            this.flags = new Tools.getUserBadges(data.public_flags);
+            this.flags = Tools.getUserBadges(data.public_flags);
         }
     }
     /**
@@ -156,3 +156,5 @@ class User {
         });
     }
 }
+
+module.exports = User;

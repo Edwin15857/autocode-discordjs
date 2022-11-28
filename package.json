@@ -1,27 +1,23 @@
 {
-  "name": "autocode-discordjs",
-  "version": "1.1.0",
-  "description": "Allows you to use discord.js syntax in autocode.",
+  "name": "@notedwin/autocode-discordjs",
+  "version": "1.0.8",
+  "description": "allows you to use Discord.js syntax with Autocode",
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1"
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/CTK-WARRIOR/autocode-discordjs"
+    "url": "git+https://github.com/Edwin15857/autocode-discordjs.git"
   },
   "keywords": [
     "autocode",
-    "discordjs",
-    "autocode"
+    "discordjs"
   ],
-  "bugs": {
-    "url": "https://github.com/CTK-WARRIOR/autocode-discordjs/issues"
-  },
-  "homepage": "https://github.com/CTK-WARRIOR/autocode-discordjs#readme",
-  "author": "ctk",
+  "author": "notedwin",
   "license": "ISC",
-  "dependencies": {
-    "lib": "^4.3.3"
-  }
+  "bugs": {
+    "url": "https://github.com/Edwin15857/autocode-discordjs/issues"
+  },
+  "homepage": "https://github.com/Edwin15857/autocode-discordjs#readme"
 }

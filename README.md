@@ -6,7 +6,9 @@
 ```js
 let { User, Tools } = require('autocode-discordjs');
 
-let user = new User();
+let message = context.params.event;
+
+let user = new User(message.author);
 
 Tools.getUserBadges(user.public_flags);
 ```
@@ -15,14 +17,14 @@ Tools.getUserBadges(user.public_flags);
 ```js
 let { CreateChannel } = require('@notedwin/autocode-discordjs');
 
-let event = context.params.event;
+let message = context.params.event;
 
-//CreateChannel.create(name, { guild_id, type, topic, bitrate, user_limit, rate_limit_per_user, position, permission_overwrites, parent_id, nsfw });
+//channels.create(name, { guild_id, type, topic, bitrate, user_limit, rate_limit_per_user, position, permission_overwrites, parent_id, nsfw });
 //bitrate and user_limit is only applicable for voice channels and stage channels.
 //check out more about bitrates here by reading the * section: https://discord.com/developers/docs/resources/channel#modify-channel-json-params-guild-channel
 //Check out more about channel type here: https://discord.com/developers/docs/resources/channel#channel-object-channel-types
 
-let channel = new CreateChannel(event);
+let channel = new CreateChannel(message);
 
 let createdChannel = await channel.create('test-channel', {
     type: 0, //for now, you will have to use the integer type from Discord Dev Portal. An alternative way is coming soon.
