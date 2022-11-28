@@ -1,10 +1,10 @@
-# @autocode/discordjs
+# @notedwin/autocode-discordjs
 
 ## Example Usage For Autocode
 
 ### **Tools:** get user's publicly displayed badges like hypesquad badge, discord moderator badge, etc.
 ```js
-let { User, Tools } = require('autocode-discordjs');
+let { User, Tools } = require('@notedwin/autocode-discordjs');
 
 let message = context.params.event;
 
@@ -31,8 +31,9 @@ let createdChannel = await channel.create('test-channel', {
     topic: `channel topic here`, //optional
 })
 
-//replace the data with the created channel's data if you wanna update the created channel's info.
-//use the original context.params.event if you wanna update the current channel's info instead.
+/** replace the data with the created channel's data if you wanna update the created channel's info.
+ *  use the original context.params.event if you wanna update the current channel's info instead.
+ */
 channel = new CreateChannel(createdChannel)
 await channel.setName('new-channel-name')
 await channel.setParent('891309033884094525')
