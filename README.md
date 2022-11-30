@@ -6,9 +6,9 @@
 ```js
 const {User} = require('@notedwin/autocode-discordjs');
 
-//DISCLAIMER: user_id is self defined, no example will be given
+//DISCLAIMER: data is self defined
 
-let user = new User(user_id)
+let user = new User(data.user)
 console.log(user)
 /** Output:
  * User {
@@ -64,7 +64,7 @@ tools.getUserBadges(author.public_flags)
 
 ## Example Usage For Autocode
 
-### **Tools:** get user's publicly displayed badges like hypesquad badge, discord moderator badge, etc.
+### **HOW TO:** get user's publicly displayed badges like hypesquad badge, discord moderator badge, etc.
 
 ```js
 let { User, Tools } = require('@notedwin/autocode-discordjs');
@@ -73,7 +73,10 @@ let message = context.params.event;
 
 let user = new User(message.author);
 
+//Method 1:
 Tools.getUserBadges(user.public_flags);
+//Method 2:
+console.log(user.flags)
 ```
 
 ### **CreateChannel:** ability to use this class similar like Discord.js to create new channels, set parent (category), set position (position of the channel in a category), and send message to a specific channel.
