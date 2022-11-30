@@ -114,7 +114,9 @@ class User {
         const DISCORD_EPOCH = 1420070400000;
 
         function convertSnowflakeToDate(snowflake) {
-            return new Date(snowflake / 4194304 + DISCORD_EPOCH);
+            const createdAt = new Date(snowflake / 4194304 + DISCORD_EPOCH).getTime()
+            const unixTimestamp = Math.floor(createdAt /1000)
+            return unixTimestamp;
         }
 
         return convertSnowflakeToDate(this.id)
