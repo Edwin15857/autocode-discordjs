@@ -101,7 +101,7 @@ class User {
          * @type {boolean}
          * @readonly
          */
-     get partial() {
+    get partial() {
         return typeof this.username !== 'string';
     }
 
@@ -113,13 +113,10 @@ class User {
     get createdTimestamp() {
         const DISCORD_EPOCH = 1420070400000;
 
-        function convertSnowflakeToDate(snowflake) {
-            const createdAt = new Date(snowflake / 4194304 + DISCORD_EPOCH).getTime()
-            const unixTimestamp = Math.floor(createdAt /1000)
-            return unixTimestamp;
-        }
+        const createdAt = new Date(this.id / 4194304 + DISCORD_EPOCH).getTime()
+        const unixTimestamp = Math.floor(createdAt / 1000)
+        return unixTimestamp;
 
-        return convertSnowflakeToDate(this.id)
     }
 
     /**
