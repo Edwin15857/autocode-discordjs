@@ -1,6 +1,6 @@
 {
   "name": "@notedwin/autocode-discordjs",
-  "version": "1.0.12",
+  "version": "1.0.13",
   "description": "allows you to use Discord.js syntax with Autocode",
   "main": "index.js",
   "scripts": {
